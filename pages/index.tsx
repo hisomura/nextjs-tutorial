@@ -4,11 +4,11 @@ import Layout, { siteTitle } from '../components/layout'
 import utilStyles from '../styles/utils.module.css'
 import Alert from '../components/alert'
 import { getSortedPostsData } from '../lib/posts'
-import Date from "../components/date";
+import Date from '../components/date'
 
 export default function Home({ allPostsData }) {
   return (
-    <Layout home>
+    <Layout home="home">
       <Head>
         <title>{siteTitle}</title>
       </Head>
@@ -32,7 +32,7 @@ export default function Home({ allPostsData }) {
               {id}
               <br />
               <small className={utilStyles.list}>
-                <Date dateString={date}/>
+                <Date dateString={date} />
               </small>
             </li>
           ))}
